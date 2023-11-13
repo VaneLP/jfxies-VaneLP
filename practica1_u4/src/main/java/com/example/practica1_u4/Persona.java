@@ -4,16 +4,15 @@ public class Persona {
     // atributos de la clase Persona
     private String nombre;
     private String DNI;
-    private int tlf;
-    private int edad;
+    private String tlf;
+    private String edad;
 
     // constructor al cual le pasamos el nombre, el DNI, el tlf y la edad
     protected Persona(String nombre, String DNI, String tlf, String edad) {
-
-            this.nombre = nombre;
-            this.DNI = DNI;
-            this.tlf = Integer.parseInt(tlf);
-            this.edad = Integer.parseInt(edad);
+        this.nombre = nombre;
+        this.DNI = DNI;
+        this.tlf = tlf;
+        this.edad = edad;
 
     }
 
@@ -34,36 +33,26 @@ public class Persona {
 
     public void setDNI(String dni) {
 
-            this.DNI = dni;
+        this.DNI = dni;
     }
 
     // tlf
-    public int getTlf() {
+    public String getTlf() {
         return tlf;
     }
 
     public void setTlf(String tlf) {
-
-            this.tlf = Integer.parseInt(tlf);
+        this.tlf = tlf;
     }
 
     // edad
-    public int getEdad() {
+    public String getEdad() {
         return edad;
     }
 
     public void setEdad(String edad) {
 
-            this.edad = Integer.parseInt(edad);
+        this.edad = edad;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" +
-                "nombre='" + nombre + '\'' +
-                ", DNI='" + DNI + '\'' +
-                ", tlf=" + tlf +
-                ", edad=" + edad +
-                '}';
-    }
 }

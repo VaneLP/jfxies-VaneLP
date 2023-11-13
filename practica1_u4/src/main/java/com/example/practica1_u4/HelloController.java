@@ -1,14 +1,18 @@
 package com.example.practica1_u4;
 
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
-
+import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ResourceBundle;
 
-public class HelloController {
+// necesitamos implementar el initializable porque es como un main del controlador, para poder tener su metodo
+// y poder asi asignarle en el metodo los getters de la columna porque si no, no accede a los getters de Persona
+public class HelloController implements Initializable {
     private List<Persona> listaPersonas = new ArrayList<>();
 
     /*
@@ -75,33 +79,37 @@ public class HelloController {
     void pulsarAgregar(MouseEvent event) {
         //agregamos a la lista una nueva persona
         listaPersonas.add(new Persona(txtNombre.getText(),txtDni.getText(),txtTlf.getText(),textEdad.getText()));
+        System.out.println("Agregado");
     }
 
     // Boton buscar
     @FXML
     void pulsarBuscar(MouseEvent event) {
-
+        System.out.println("Buscado");
     }
 
     // Boton eliminar
     @FXML
     void pulsarEliminar(MouseEvent event) {
-
+        System.out.println("Eliminado");
     }
 
     // Boton mostrar
     @FXML
     void pulsarMostrar(MouseEvent event) {
+        System.out.println("Mostrado");
         for (Persona p : listaPersonas) {
-            colNombre.setCellValueFactory(new PropertyValueFactory<>(p.getNombre()));
-            colDNI.setCellValueFactory(new PropertyValueFactory<>(p.getDNI()));
-            colTlf.setCellValueFactory(new PropertyValueFactory<>(String.valueOf(p.getTlf())));
-            colEdad.setCellValueFactory(new PropertyValueFactory<>(String.valueOf(p.getEdad())));
-
-            tablaPersona.getColumns().addAll(colNombre,colDNI,colTlf,colEdad);
+            tablaPersona.getItems().add(p);
         }
     }
 
-
+    // ---- METODOS ---
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+        colNombre.setCellValueFactory(new PropertyValueFactory<>("Nombre"));
+        colDNI.setCellValueFactory(new PropertyValueFactory<>("DNI"));
+        colTlf.setCellValueFactory(new PropertyValueFactory<>("Tlf"));
+        colEdad.setCellValueFactory(new PropertyValueFactory<>("Edad"));
+    }
 }
 
