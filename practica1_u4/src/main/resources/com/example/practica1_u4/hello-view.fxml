@@ -46,106 +46,106 @@
 <?import javafx.scene.layout.VBox?>
 
 <VBox prefHeight="463.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.practica1_u4.HelloController">
-  <children>
-      <BorderPane prefHeight="464.0" prefWidth="900.0">
-         <center>
-            <TableView fx:id="tablaPersona" prefHeight="375.0" prefWidth="494.0" BorderPane.alignment="CENTER">
-              <columns>
-                <TableColumn fx:id="colNombre" prefWidth="209.0" text="Nombre" />
-                <TableColumn fx:id="colDNI" prefWidth="216.0" text="DNI" />
-                  <TableColumn fx:id="colEdad" prefWidth="72.0" text="Edad" />
-                  <TableColumn fx:id="colTlf" prefWidth="142.0" text="Telefono" />
-              </columns>
-            </TableView>
-         </center>
-         <left>
-            <Pane prefHeight="350.0" prefWidth="258.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Label layoutX="12.0" layoutY="56.0" text="Nombre:" />
-                  <Label layoutX="13.0" layoutY="93.0" text="DNI:" />
-                  <Label layoutX="10.0" layoutY="161.0" text="Edad:" />
-                  <Label layoutX="11.0" layoutY="129.0" text="Telefono:" />
-                  <TextField fx:id="txtNombre" layoutX="67.0" layoutY="52.0" prefHeight="25.0" prefWidth="182.0" />
-                  <TextField fx:id="txtDni" layoutX="66.0" layoutY="89.0" prefHeight="25.0" prefWidth="182.0" promptText="12345678A" />
-                  <TextField fx:id="textEdad" layoutX="66.0" layoutY="157.0" prefHeight="25.0" prefWidth="39.0" />
-                  <TextField fx:id="txtTlf" layoutX="64.0" layoutY="125.0" prefHeight="25.0" prefWidth="182.0" />
-               </children>
-            </Pane>
-         </left>
-         <top>
-          <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
-            <menus>
-              <Menu fx:id="menuAlum" mnemonicParsing="false" text="Alumno">
-                <items>
-                  <MenuItem mnemonicParsing="false" text="New" />
-                  <MenuItem mnemonicParsing="false" text="Open…" />
-                  <Menu mnemonicParsing="false" text="Open Recent" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Close" />
-                  <MenuItem mnemonicParsing="false" text="Save" />
-                  <MenuItem mnemonicParsing="false" text="Save As…" />
-                  <MenuItem mnemonicParsing="false" text="Revert" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Preferences…" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Quit" />
-                </items>
-              </Menu>
-              <Menu fx:id="menuProfe" mnemonicParsing="false" text="Profesor">
-                <items>
-                  <MenuItem mnemonicParsing="false" text="Undo" />
-                  <MenuItem mnemonicParsing="false" text="Redo" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Cut" />
-                  <MenuItem mnemonicParsing="false" text="Copy" />
-                  <MenuItem mnemonicParsing="false" text="Paste" />
-                  <MenuItem mnemonicParsing="false" text="Delete" />
-                  <SeparatorMenuItem mnemonicParsing="false" />
-                  <MenuItem mnemonicParsing="false" text="Select All" />
-                  <MenuItem mnemonicParsing="false" text="Unselect All" />
-                </items>
-              </Menu>
-                  <Menu fx:id="menuCur" mnemonicParsing="false" text="Curso">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Undo" />
-                        <MenuItem mnemonicParsing="false" text="Redo" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Cut" />
-                        <MenuItem mnemonicParsing="false" text="Copy" />
-                        <MenuItem mnemonicParsing="false" text="Paste" />
-                        <MenuItem mnemonicParsing="false" text="Delete" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Select All" />
-                        <MenuItem mnemonicParsing="false" text="Unselect All" />
-                     </items>
-                  </Menu>
-                  <Menu fx:id="menuAbout" mnemonicParsing="false" text="About">
-                     <items>
-                        <MenuItem mnemonicParsing="false" text="Undo" />
-                        <MenuItem mnemonicParsing="false" text="Redo" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Cut" />
-                        <MenuItem mnemonicParsing="false" text="Copy" />
-                        <MenuItem mnemonicParsing="false" text="Paste" />
-                        <MenuItem mnemonicParsing="false" text="Delete" />
-                        <SeparatorMenuItem mnemonicParsing="false" />
-                        <MenuItem mnemonicParsing="false" text="Select All" />
-                        <MenuItem mnemonicParsing="false" text="Unselect All" />
-                     </items>
-                  </Menu>
-            </menus>
-          </MenuBar>
-         </top>
-         <bottom>
-            <Pane prefHeight="52.0" prefWidth="898.0" BorderPane.alignment="CENTER">
-               <children>
-                  <Button fx:id="botonAgregar" layoutX="288.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarAgregar" text="Agregar" />
-                  <Button fx:id="botonBuscar" layoutX="459.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarBuscar" text="Buscar" />
-                  <Button fx:id="BotonEliminar" layoutX="632.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarEliminar" text="Eliminar" />
-                  <Button fx:id="botonMostrar" layoutX="790.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarMostrar" text="Mostrar" />
-               </children>
-            </Pane>
-         </bottom>
-      </BorderPane>
-  </children>
+    <children>
+        <BorderPane prefHeight="464.0" prefWidth="900.0">
+            <center>
+                <TableView fx:id="tablaPersona" prefHeight="375.0" prefWidth="494.0" BorderPane.alignment="CENTER">
+                    <columns>
+                        <TableColumn fx:id="colNombre" prefWidth="209.0" text="Nombre" />
+                        <TableColumn fx:id="colDNI" prefWidth="216.0" text="DNI" />
+                        <TableColumn fx:id="colEdad" prefWidth="72.0" text="Edad" />
+                        <TableColumn fx:id="colTlf" prefWidth="142.0" text="Telefono" />
+                    </columns>
+                </TableView>
+            </center>
+            <left>
+                <Pane prefHeight="350.0" prefWidth="258.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Label layoutX="11.0" layoutY="77.0" text="Nombre:" />
+                        <Label layoutX="12.0" layoutY="126.0" text="DNI:" />
+                        <Label layoutX="12.0" layoutY="222.0" text="Edad:" />
+                        <Label layoutX="12.0" layoutY="172.0" text="Telefono:" />
+                        <TextField fx:id="txtNombre" layoutX="76.0" layoutY="73.0" prefHeight="25.0" prefWidth="182.0" />
+                        <TextField fx:id="txtDni" layoutX="76.0" layoutY="122.0" prefHeight="25.0" prefWidth="182.0" promptText="12345678A" />
+                        <TextField fx:id="textEdad" layoutX="76.0" layoutY="218.0" prefHeight="25.0" prefWidth="39.0" />
+                        <TextField fx:id="txtTlf" layoutX="76.0" layoutY="168.0" prefHeight="25.0" prefWidth="182.0" />
+                    </children>
+                </Pane>
+            </left>
+            <top>
+                <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
+                    <menus>
+                        <Menu fx:id="menuAlum" mnemonicParsing="false" text="Alumno">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="New" />
+                                <MenuItem mnemonicParsing="false" text="Open…" />
+                                <Menu mnemonicParsing="false" text="Open Recent" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Close" />
+                                <MenuItem mnemonicParsing="false" text="Save" />
+                                <MenuItem mnemonicParsing="false" text="Save As…" />
+                                <MenuItem mnemonicParsing="false" text="Revert" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Preferences…" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Quit" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menuProfe" mnemonicParsing="false" text="Profesor">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Undo" />
+                                <MenuItem mnemonicParsing="false" text="Redo" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Cut" />
+                                <MenuItem mnemonicParsing="false" text="Copy" />
+                                <MenuItem mnemonicParsing="false" text="Paste" />
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Select All" />
+                                <MenuItem mnemonicParsing="false" text="Unselect All" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menuCur" mnemonicParsing="false" text="Curso">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Undo" />
+                                <MenuItem mnemonicParsing="false" text="Redo" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Cut" />
+                                <MenuItem mnemonicParsing="false" text="Copy" />
+                                <MenuItem mnemonicParsing="false" text="Paste" />
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Select All" />
+                                <MenuItem mnemonicParsing="false" text="Unselect All" />
+                            </items>
+                        </Menu>
+                        <Menu fx:id="menuAbout" mnemonicParsing="false" text="About">
+                            <items>
+                                <MenuItem mnemonicParsing="false" text="Undo" />
+                                <MenuItem mnemonicParsing="false" text="Redo" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Cut" />
+                                <MenuItem mnemonicParsing="false" text="Copy" />
+                                <MenuItem mnemonicParsing="false" text="Paste" />
+                                <MenuItem mnemonicParsing="false" text="Delete" />
+                                <SeparatorMenuItem mnemonicParsing="false" />
+                                <MenuItem mnemonicParsing="false" text="Select All" />
+                                <MenuItem mnemonicParsing="false" text="Unselect All" />
+                            </items>
+                        </Menu>
+                    </menus>
+                </MenuBar>
+            </top>
+            <bottom>
+                <Pane prefHeight="52.0" prefWidth="898.0" BorderPane.alignment="CENTER">
+                    <children>
+                        <Button fx:id="botonAgregar" layoutX="288.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarAgregar" text="Agregar" />
+                        <Button fx:id="botonBuscar" layoutX="459.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarBuscar" text="Buscar" />
+                        <Button fx:id="BotonEliminar" layoutX="632.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarEliminar" text="Eliminar" />
+                        <Button fx:id="botonMostrar" layoutX="790.0" layoutY="14.0" mnemonicParsing="false" onMouseClicked="#pulsarMostrar" text="Mostrar" />
+                    </children>
+                </Pane>
+            </bottom>
+        </BorderPane>
+    </children>
 </VBox>
