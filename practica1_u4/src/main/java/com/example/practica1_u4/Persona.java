@@ -54,5 +54,4 @@ public class Persona {
 
         this.edad = edad;
     }
-
 }

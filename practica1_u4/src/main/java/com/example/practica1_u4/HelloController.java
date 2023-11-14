@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
@@ -80,24 +81,63 @@ public class HelloController implements Initializable {
         //agregamos a la lista una nueva persona
         listaPersonas.add(new Persona(txtNombre.getText(),txtDni.getText(),txtTlf.getText(),textEdad.getText()));
         System.out.println("Agregado");
+
+        txtNombre.setText("");
+        txtDni.setText("");
+        txtTlf.setText("");
+        textEdad.setText("");
     }
 
     // Boton buscar
     @FXML
     void pulsarBuscar(MouseEvent event) {
         System.out.println("Buscado");
+
+        //recorremos la lista de personas
+        for (Persona p : listaPersonas) {
+            //si el dni de la persona es igual al dni del textfield
+            if(p.getDNI().equalsIgnoreCase(txtDni.getText())) {
+                //eliminamos a todas las personas de la lista de la tabla
+                tablaPersona.getItems().removeAll(listaPersonas);
+                //añadimos la persona a la tabla
+                tablaPersona.getItems().add(p);
+            }
+        }
+
+        //refrescamos la tabla
+        tablaPersona.refresh();
     }
 
     // Boton eliminar
     @FXML
     void pulsarEliminar(MouseEvent event) {
         System.out.println("Eliminado");
+        //eliminamos de la tabla el item que tengamos seleccionado
+        Persona p = tablaPersona.getSelectionModel().getSelectedItem();
+
+        //lo eliminamos de la lista
+        listaPersonas.remove(p);
+
+        //eliminamos todos los items de la tabla
+        tablaPersona.getItems().remove(p);
+
+        //refrescamos la tabla
+        tablaPersona.refresh();
+
     }
 
     // Boton mostrar
     @FXML
     void pulsarMostrar(MouseEvent event) {
         System.out.println("Mostrado");
+
+        //eliminamos todos los items de la tabla
+        tablaPersona.getItems().removeAll(tablaPersona.getItems());
+
+        //refrescamos la tabla
+        tablaPersona.refresh();
+
+        //añadimnos a las personas en la tabla
         for (Persona p : listaPersonas) {
             tablaPersona.getItems().add(p);
         }

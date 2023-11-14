@@ -10,6 +10,8 @@ import java.io.IOException;
 public class HelloApplication extends Application {
     @Override
     public void start(Stage stage) throws IOException {
+        //para agregar el css
+        //Application.setUserAgentStylesheet(STYLESHEET_CASPIAN);
         //leemos el FXML
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         //redimensionamos la ventana
