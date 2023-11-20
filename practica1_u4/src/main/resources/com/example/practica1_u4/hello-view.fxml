@@ -99,6 +99,14 @@
             <top>
                 <MenuBar fx:id="menuBar" BorderPane.alignment="CENTER">
                     <menus>
+                  <Menu fx:id="menuPer" mnemonicParsing="false" text="Persona">
+                    <items>
+                      <MenuItem mnemonicParsing="false" onAction="#itemAgregarPer" text="Agregar" />
+                        <MenuItem mnemonicParsing="false" onAction="#itemBuscarPer" text="Buscar" />
+                        <MenuItem mnemonicParsing="false" onAction="#itemEliminarPer" text="Eliminar" />
+                        <MenuItem mnemonicParsing="false" onAction="#itemMostrarPer" text="Mostrar" />
+                    </items>
+                  </Menu>
                         <Menu fx:id="menuAlum" mnemonicParsing="false" text="Alumno">
                             <items>
                                 <MenuItem mnemonicParsing="false" text="Agregar" />
