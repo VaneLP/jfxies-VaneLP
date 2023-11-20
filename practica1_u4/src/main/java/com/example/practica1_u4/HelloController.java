@@ -5,6 +5,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.input.MouseEvent;
+import javafx.stage.Popup;
 
 import java.net.URL;
 import java.util.ArrayList;
@@ -80,7 +81,6 @@ public class HelloController implements Initializable {
     void pulsarAgregar(MouseEvent event) {
         //agregamos a la lista una nueva persona
         listaPersonas.add(new Persona(txtNombre.getText(),txtDni.getText(),txtTlf.getText(),textEdad.getText()));
-        System.out.println("Agregado");
 
         txtNombre.setText("");
         txtDni.setText("");
@@ -91,7 +91,6 @@ public class HelloController implements Initializable {
     // Boton buscar
     @FXML
     void pulsarBuscar(MouseEvent event) {
-        System.out.println("Buscado");
 
         //recorremos la lista de personas
         for (Persona p : listaPersonas) {
@@ -111,7 +110,6 @@ public class HelloController implements Initializable {
     // Boton eliminar
     @FXML
     void pulsarEliminar(MouseEvent event) {
-        System.out.println("Eliminado");
         //eliminamos de la tabla el item que tengamos seleccionado
         Persona p = tablaPersona.getSelectionModel().getSelectedItem();
 
@@ -129,8 +127,6 @@ public class HelloController implements Initializable {
     // Boton mostrar
     @FXML
     void pulsarMostrar(MouseEvent event) {
-        System.out.println("Mostrado");
-
         //eliminamos todos los items de la tabla
         tablaPersona.getItems().removeAll(tablaPersona.getItems());
 
