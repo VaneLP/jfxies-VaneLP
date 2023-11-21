@@ -189,13 +189,15 @@ public class HelloController implements Initializable {
      * Metodo para agregar personas
      */
     private void agregarPer() {
-        //agregamos a la lista una nueva persona
-        listaPersonas.add(new Persona(txtNombre.getText(),txtDni.getText(),txtTlf.getText(),textEdad.getText()));
-
-        txtNombre.setText("");
-        txtDni.setText("");
-        txtTlf.setText("");
-        textEdad.setText("");
+        if(txtNombre.getText().equals("") || txtDni.getText().equals("")|| txtTlf.getText().equals("") || textEdad.getText().equals("")){
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setHeaderText(null);
+            alert.setTitle("Error al agregar");
+            alert.setContentText("Error, puede que algun campo este vacio. Vuelvelo a intentar");
+            alert.showAndWait();
+        }else
+            //agregamos a la lista una nueva persona
+            listaPersonas.add(new Persona(txtNombre.getText(),txtDni.getText(),txtTlf.getText(),textEdad.getText()));
     }
 
 }
